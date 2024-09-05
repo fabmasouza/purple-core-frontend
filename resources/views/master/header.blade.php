@@ -11,10 +11,10 @@
                 <!-- App brand starts -->
                 <div class="app-brand">
                     <a href="index.html" class="d-lg-block d-none">
-                        <img src="{{ asset('images/logo.svg') }}" class="logo" alt="Bootstrap Gallery" />
+                        <img src="{{ asset('images/logo-purple.svg') }}" class="logo" alt="Bootstrap Gallery" />
                     </a>
                     <a href="index.html" class="d-lg-none d-md-block">
-                        <img src="{{ asset('images/logo-sm.svg') }}" class="logo" alt="Bootstrap Gallery" />
+                        <img src="{{ asset('images/logo-purple.svg') }}" class="logo" alt="Bootstrap Gallery" />
                     </a>
                 </div>
                 <!-- App brand ends -->
@@ -152,11 +152,11 @@
                     <div class="dropdown ms-3">
                         <a id="userSettings" class="dropdown-toggle d-flex py-2 align-items-center text-decoration-none"
                             href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('images/user2.png') }}" class="rounded-2 img-3x"
+                            <img src="{{ asset('images/ana-paula.jpeg') }}" class="rounded-2 img-3x"
                                 alt="Bootstrap Gallery" />
                             <div class="ms-2 text-truncate d-lg-block d-none text-white">
                                 <span class="d-flex opacity-50 small">Admin</span>
-                                <span>Taylor Franklin</span>
+                                <span>Ana Paula</span>
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end">
