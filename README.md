@@ -1,66 +1,115 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Deploy do Laravel na KingHost
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este guia detalha os passos para realizar o deploy de uma aplicação **Laravel** no servidor **KingHost**.
 
-## About Laravel
+## 🛠️ Tecnologias Utilizadas
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+- ![Laravel](https://img.shields.io/badge/-Laravel-F55247?logo=laravel&logoColor=white&style=flat) **Laravel**
+- ![PHP](https://img.shields.io/badge/-PHP-777BB4?logo=php&logoColor=white&style=flat) **PHP**
+- ![Composer](https://img.shields.io/badge/-Composer-885630?logo=composer&logoColor=white&style=flat) **Composer**
+- ![Git](https://img.shields.io/badge/-Git-F05032?logo=git&logoColor=white&style=flat) **Git**
+- ![PostgreSQL](https://img.shields.io/badge/-PostgreSQL-316192?logo=postgresql&logoColor=white&style=flat) **PostgreSQL**
+- ![KingHost](https://img.shields.io/badge/-KingHost-FFDD00?style=flat&color=green) **KingHost**
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📋 Pré-requisitos
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- Acesso **SSH** ao servidor **KingHost**.
+- Repositório **Git** do projeto **Laravel**.
+- **Composer** instalado.
 
-## Learning Laravel
+## 📦 Passo a Passo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 1. Acessar o servidor via SSH
+Conecte-se ao servidor utilizando suas credenciais SSH:
+```bash
+ssh usuario@ftp.purpletechnology.com.br
+```
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 2. Navegar para o diretório da aplicação
+Acesse o diretório onde a aplicação será hospedada (crie a pasta caso não exista):
+```bash
+cd www/app/
+```
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### 3. Clonar o Repositório
+Clone o repositório do projeto para o diretório:
+```bash
+git clone https://github.com/fabmasouza/purple-core-frontend .
+```
 
-## Laravel Sponsors
+### 4. Instalar o Composer
+Baixe e instale o Composer:
+```bash
+curl -sS https://getcomposer.org/installer | php
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 5. Instalar Dependências
+Instale as dependências otimizadas, sem as dependências de desenvolvimento:
+```bash
+php composer.phar install --optimize-autoloader --no-dev
+```
 
-### Premium Partners
+### 6. Configurar o Arquivo .env
+Crie ou verifique o arquivo .env com as seguintes configurações:
+```env
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:mc35kH5RKCYU4BngyA5ZVnPZmfEJnWRmLTlMaEL3V+w=
+APP_DEBUG=true
+APP_TIMEZONE=UTC
+APP_URL=https://app.purpletechnology.com.br
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+APP_LOCALE=en
+APP_FALLBACK_LOCALE=en
+APP_FAKER_LOCALE=en_US
 
-## Contributing
+DB_CONNECTION=pgsql
+DB_HOST=pgsql.purpletechnology.com.br
+DB_PORT=5432
+DB_DATABASE=purpletechnology
+DB_USERNAME=
+DB_PASSWORD=
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 7. Mover o Conteúdo da Pasta public
+Mova o conteúdo da pasta public do Laravel para o diretório raiz do servidor (ou para o diretório apontado pelo subdomínio).
 
-## Code of Conduct
+### 8. Modificar o Caminho de Referência no index.php
+No arquivo www/app/index.php, altere as seguintes linhas:
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Antes:
+```php
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
+}
 
-## Security Vulnerabilities
+require __DIR__.'/../vendor/autoload.php';
+(require_once __DIR__.'/../bootstrap/app.php')
+    ->handleRequest(Request::capture());
+```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Depois:
+```php
+if (file_exists($maintenance = __DIR__.'/storage/framework/maintenance.php')) {
+    require $maintenance;
+}
 
-## License
+require __DIR__.'/vendor/autoload.php';
+(require_once __DIR__.'/bootstrap/app.php')
+    ->handleRequest(Request::capture());
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 9. Definir Permissões para as Pastas
+Conceda permissão de escrita para as pastas storage e bootstrap/cache. No cliente FTP ou painel da KingHost, defina as permissões como 755 para essas pastas ou execute o comando via SSH:
+
+```bash
+chmod -R 755 storage
+chmod -R 755 bootstrap/cache
+```
+
+### 10. Gerar a Chave de Acesso
+Por fim, gere uma nova chave de acesso com o comando:
+
+```bash
+php artisan key:generate
+```
