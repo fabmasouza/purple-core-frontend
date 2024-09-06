@@ -13,6 +13,16 @@ jobs:
       - name: Checar o código
         uses: actions/checkout@v2
 
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Add SSH known hosts
+        run: |
+          ssh-keyscan -H ftp.purpletechnology.com.br >> ~/.ssh/known_hosts
+
       - name: Configurar Acesso SSH
         uses: webfactory/ssh-agent@v0.5.3
         with: 
