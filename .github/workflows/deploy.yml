@@ -16,8 +16,11 @@ jobs:
       - name: Configurar Acesso SSH
         uses: webfactory/ssh-agent@v0.5.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Adicione sua chave SSH privada nos segredos do GitHub
-
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          script: whoami
+          
       - name: Acessar o servidor via SSH e realizar o deploy
         run: |
           ssh -o StrictHostKeyChecking=no usuario@ftp.purpletechnology.com.br << 'EOF'
