@@ -13,16 +13,51 @@ jobs:
       - name: Checar o código
         uses: actions/checkout@v2
 
-      - name: Configurar Acesso SSH
-        uses: webfactory/ssh-agent@v0.5.3
-        with: 
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Adicione sua chave SSH privada nos segredos do GitHub
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: |
+            whoami
+            ls -al
 
       - name: Acessar o servidor via SSH e realizar o deploy
         run: |
-          ssh -o StrictHostKeyChecking=no purpletechnology@ftp.purpletechnology.com.br << 'EOF'
+          ssh -o StrictHostKeyChecking=no usuario@ftp.purpletechnology.com.br << 'EOF'
           cd www/app/
-          ls -l
+
+          # Clonar ou atualizar o repositório
+          if [ -d ".git" ]; then
+            git pull origin main
+          else
+            git clone https://github.com/fabmasouza/purple-core-frontend .
+          fi
+
+          # Instalar o Composer
+          if [ ! -f "composer.phar" ]; then
+            curl -sS https://getcomposer.org/installer | php
+          fi
+
+          # Instalar dependências otimizadas
+          php composer.phar install --optimize-autoloader --no-dev
+
+          # Verificar ou criar o arquivo .env
+          if [ ! -f ".env" ]; then
+            cp .env.example .env
+          fi
+
+          # Mover o conteúdo da pasta public para a raiz (caso necessário)
+          rsync -av --progress public/ ../
+
+          # Ajustar permissões
+          chmod -R 755 storage
+          chmod -R 755 bootstrap/cache
+
+          # Gerar a chave de acesso
+          php artisan key:generate
 
           EOF
 
