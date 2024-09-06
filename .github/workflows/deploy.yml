@@ -13,8 +13,8 @@ jobs:
       - name: Checar o código
         uses: actions/checkout@v2
 
-      - name: Configurar Acesso SSH
-        uses: webfactory/ssh-agent@v0.5.3
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
