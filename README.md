@@ -1,6 +1,6 @@
-# 🚀 Deploy do Laravel na KingHost
+# 🚀 Deploy do Frontend do Purple Core na KingHost
 
-Este guia detalha os passos para realizar o deploy de uma aplicação **Laravel** no servidor **KingHost**.
+Este guia detalha os passos para realizar o deploy do **Frontend do Purple Core** no servidor **KingHost**.
 
 ## 🛠️ Tecnologias Utilizadas
 
