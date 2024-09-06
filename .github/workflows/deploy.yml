@@ -13,15 +13,11 @@ jobs:
       - name: Checar o código
         uses: actions/checkout@v2
 
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v1.0.3
-        with:
-          host: ftp.purpletechnology.com.br
-          username: purpletechnology
-          password: VitorSemPinto2
-          port: 22
-          script: whoami
-          
+      - name: Configurar Acesso SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with: 
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # Adicione sua chave SSH privada nos segredos do GitHub
+
       - name: Acessar o servidor via SSH e realizar o deploy
         run: |
           ssh -o StrictHostKeyChecking=no usuario@ftp.purpletechnology.com.br << 'EOF'
