@@ -18,7 +18,7 @@ jobs:
         with:
           host: purpletechnology.com.br
           username: ${{ secrets.USERNAME }}
-          password: ${{ secrets.PASSWORD }}
+          password: VitorSemPinto2
           port: 22
           script: whoami
           
