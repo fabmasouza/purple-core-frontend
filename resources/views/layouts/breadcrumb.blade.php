@@ -1,16 +1,15 @@
-<!-- Row start -->
-<div class="row gx-3">
-  <div class="col-12 col-xl-6">
-    <!-- Breadcrumb start -->
-    <ol class="breadcrumb mb-3">
-      <li class="breadcrumb-item">
-        <i class="icon-house_siding lh-1"></i>
-        <a href="index.html" class="text-decoration-none">Home</a>
-      </li>
-      <li class="breadcrumb-item">Dashboards</li>
-      <li class="breadcrumb-item">Analytics</li>
-    </ol>
-    <!-- Breadcrumb end -->
+<!-- breadcrumb start-->
+<div class="codex-breadcrumb">
+  <div class="breadcrumb-contain">
+    <div class="left-breadcrumb">
+      <h1>Default</h1>
+    </div>
+    <div class="right-breadcrumb">
+      <ul class="breadcrumb">
+        <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+        <li class="breadcrumb-item active"><a href="javascript:void(0);">Default</a></li>
+      </ul>
+    </div>
   </div>
 </div>
-<!-- Row end -->
+<!-- breadcrumb end-->

@@ -1,195 +1,190 @@
-<!-- App header starts -->
-<div class="app-header d-flex align-items-center">
-
-    <!-- Container starts -->
-    <div class="container">
-
-        <!-- Row starts -->
-        <div class="row gx-3">
-            <div class="col-md-3 col-2">
-
-                <!-- App brand starts -->
-                <div class="app-brand">
-                    <a href="index.html" class="d-lg-block d-none">
-                        <img src="{{ asset('images/logo-purple.svg') }}" class="logo" alt="Bootstrap Gallery" />
-                    </a>
-                    <a href="index.html" class="d-lg-none d-md-block">
-                        <img src="{{ asset('images/logo-purple.svg') }}" class="logo" alt="Bootstrap Gallery" />
-                    </a>
+<header class="codex-header">
+    <div class="header-contian flex item-center justify-between">
+        <div class="header-left flex item-center">
+            <div class="sidebar-action navicon-wrap"> <i data-feather="grid"></i></div>
+            <div class="search-bar">
+                <div class="input-group">
+                    <input class="form-control" type="text" value="" placeholder="Search Here....."><span
+                        class="input-group-text"><i data-feather="search"></i></span>
                 </div>
-                <!-- App brand ends -->
-
-            </div>
-
-            <div class="col-md-9 col-10">
-
-                <!-- App header actions start -->
-                <div class="header-actions col">
-
-                    <!-- Search container start -->
-                    <div class="search-container d-none d-lg-block">
-                        <input type="text" id="search" class="form-control" placeholder="Search" />
-                        <i class="icon-search"></i>
-                    </div>
-                    <!-- Search container end -->
-
-                    <div class="d-sm-flex d-none align-items-center gap-2">
-                        <div class="dropdown">
-                            <a class="dropdown-toggle header-action-icon" href="#!" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="icon-warning fs-4 lh-1 text-white"></i>
-                                <span class="count">7</span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-md">
-                                <h5 class="fw-semibold px-3 py-2 text-primary">
-                                    Notifications
-                                </h5>
-                                <div class="dropdown-item">
-                                    <div class="d-flex py-2">
-                                        <div class="icons-box md bg-success rounded-circle me-3">
-                                            <i class="icon-shopping-bag text-white fs-4"></i>
-                                        </div>
-                                        <div class="m-0">
-                                            <h6 class="mb-1 fw-semibold">Rosalie Deleon</h6>
-                                            <p class="mb-1 text-secondary">
-                                                You have new order.
-                                            </p>
-                                            <p class="small m-0 text-secondary">
-                                                30 mins ago
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown-item">
-                                    <div class="d-flex py-2">
-                                        <div class="icons-box md bg-danger rounded-circle me-3">
-                                            <i class="icon-alert-triangle text-white fs-4"></i>
-                                        </div>
-                                        <div class="m-0">
-                                            <h6 class="mb-1 fw-semibold">Donovan Stuart</h6>
-                                            <p class="mb-2">Membership has been expired.</p>
-                                            <p class="small m-0 text-secondary">2 days ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown-item">
-                                    <div class="d-flex py-2">
-                                        <div class="icons-box md bg-warning rounded-circle me-3">
-                                            <i class="icon-shopping-cart text-white fs-4"></i>
-                                        </div>
-                                        <div class="m-0">
-                                            <h6 class="mb-1 fw-semibold">Roscoe Richards</h6>
-                                            <p class="mb-2">Payment pending. Pay now.</p>
-                                            <p class="small m-0 text-secondary">3 days ago</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-grid mx-3 my-1">
-                                    <a href="javascript:void(0)" class="btn btn-outline-primary">View all</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown">
-                            <a class="dropdown-toggle header-action-icon" href="#!" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="icon-drafts fs-4 lh-1 text-white"></i>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end dropdown-menu-md">
-                                <h5 class="fw-semibold px-3 py-2 text-primary">
-                                    Messages
-                                </h5>
-                                <div class="dropdown-item">
-                                    <div class="d-flex py-2">
-                                        <img src="{{ asset('images/user3.png') }}" class="img-3x me-3 rounded-5"
-                                            alt="Admin Theme" />
-                                        <div class="m-0">
-                                            <h6 class="mb-1 fw-semibold">Angelia Payne</h6>
-                                            <p class="mb-1 text-secondary">
-                                                Membership has been ended.
-                                            </p>
-                                            <p class="small m-0 text-secondary">
-                                                Today, 07:30pm
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown-item">
-                                    <div class="d-flex py-2">
-                                        <img src="{{ asset('images/user1.png') }}" class="img-3x me-3 rounded-5"
-                                            alt="Admin Theme" />
-                                        <div class="m-0">
-                                            <h6 class="mb-1 fw-semibold">Clyde Fowler</h6>
-                                            <p class="mb-1 text-secondary">
-                                                Congratulate, James for new job.
-                                            </p>
-                                            <p class="small m-0 text-secondary">
-                                                Today, 08:00pm
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="dropdown-item">
-                                    <div class="d-flex py-2">
-                                        <img src="{{ asset('images/user4.png') }}" class="img-3x me-3 rounded-5"
-                                            alt="Admin Theme" />
-                                        <div class="m-0">
-                                            <h6 class="mb-1 fw-semibold">Sophie Michiels</h6>
-                                            <p class="mb-2 text-secondary">
-                                                Lewis added new schedule release.
-                                            </p>
-                                            <p class="small m-0 text-secondary">
-                                                Today, 09:30pm
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-grid mx-3 my-1">
-                                    <a href="javascript:void(0)" class="btn btn-outline-primary">View all</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="dropdown ms-3">
-                        <a id="userSettings" class="dropdown-toggle d-flex py-2 align-items-center text-decoration-none"
-                            href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="{{ asset('images/ana-paula.jpeg') }}" class="rounded-2 img-3x"
-                                alt="Bootstrap Gallery" />
-                            <div class="ms-2 text-truncate d-lg-block d-none text-white">
-                                <span class="d-flex opacity-50 small">Admin</span>
-                                <span>Ana Paula</span>
-                            </div>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end">
-                            <div class="header-action-links">
-                                <a class="dropdown-item" href="profile.html"><i
-                                        class="icon-user border border-primary text-primary"></i>Profile</a>
-                                <a class="dropdown-item" href="settings.html"><i
-                                        class="icon-settings border border-danger text-danger"></i>Settings</a>
-                                <a class="dropdown-item" href="widgets.html"><i
-                                        class="icon-box border border-info text-info"></i>Widgets</a>
-                            </div>
-                            <div class="mx-3 mt-2 d-grid">
-                                <a href="login.html" class="btn btn-outline-danger">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Toggle Menu starts -->
-                    <button class="btn btn-warning btn-sm ms-3 d-lg-none d-md-block" type="button"
-                        data-bs-toggle="offcanvas" data-bs-target="#MobileMenu">
-                        <i class="icon-menu"></i>
-                    </button>
-                    <!-- Toggle Menu ends -->
-
-                </div>
-                <!-- App header actions end -->
-
             </div>
         </div>
-        <!-- Row ends -->
-
+        <div class="header-right flex item-center">
+            <ul class="nav-iconlist">
+                <li>
+                    <div class="navicon-wrap action-dark"><i class="fa fa-moon-o icon-dark"></i><i
+                            class="fa fa-sun-o icon-light" style="display:none;"></i></div>
+                </li>
+                <li>
+                    <div class="navicon-wrap"><i data-feather="bell"></i>
+                        <div class="noti-count">04</div>
+                    </div>
+                    <div class="hover-dropdown navnotification-drop">
+                        <div class="drop-header">
+                            <h5>notification <span>05 </span></h5>
+                        </div>
+                        <ul data-simplebar>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-primary"><i class="fa fa-check-square-o"></i></div>
+                                        <div class="media-body">
+                                            <h6>order Cheked</h6><span class="text-light">1 hour ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-secondary"><i class="fa fa-first-order"></i></div>
+                                        <div class="media-body">
+                                            <h6>order receved</h6><span class="text-light">1 day ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-success"><i class="fa fa-money"></i></div>
+                                        <div class="media-body">
+                                            <h6>payment received</h6><span class="text-light">2 day ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-warning"><i class="fa fa-truck"></i></div>
+                                        <div class="media-body">
+                                            <h6>order shipped</h6><span class="text-light">2 day ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-info"><i class="fa fa-first-order"></i></div>
+                                        <div class="media-body">
+                                            <h6>order receved</h6><span class="text-light">1 day ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-success"><i class="fa fa-money"></i></div>
+                                        <div class="media-body">
+                                            <h6>payment received</h6><span class="text-light">2 day ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-warning"><i class="fa fa-truck"></i></div>
+                                        <div class="media-body">
+                                            <h6>order shipped</h6><span class="text-light">2 day ago</span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="icon-nav bg-info"><i class="fa fa-first-order"></i></div>
+                                        <div class="media-body">
+                                            <h6>order receved</h6><span class="text-light">1 day ago </span>
+                                        </div>
+                                    </div>
+                                </a></li>
+                        </ul>
+                        <div class="drop-footer"><a href="#">See All Notification<i data-feather="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="navicon-wrap"><i data-feather="shopping-cart"></i>
+                        <div class="noti-count">07</div>
+                    </div>
+                    <div class="hover-dropdown navshop-drop">
+                        <div class="drop-header">
+                            <h5>Shopping <span>07 </span></h5>
+                        </div>
+                        <ul data-simplebar>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="img-wrap"><img class="img-fluid"
+                                                src="{{ asset('images/ecom-dashboard/small-pro/1.jpg') }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>teddy bear</h6><span class="text-light">$250</span>
+                                        </div>
+                                        <div class="close-pro"><i data-feather="x"></i></div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="img-wrap"><img class="img-fluid"
+                                                src="{{ asset('images/ecom-dashboard/small-pro/2.jpg') }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>iphone</h6><span class="text-light">$140</span>
+                                        </div>
+                                        <div class="close-pro"><i data-feather="x"></i></div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="img-wrap"><img class="img-fluid"
+                                                src="{{ asset('images/ecom-dashboard/small-pro/3.jpg') }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>Apple Airpod</h6><span class="text-light">$310</span>
+                                        </div>
+                                        <div class="close-pro"><i data-feather="x"></i></div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="img-wrap"><img class="img-fluid"
+                                                src="{{ asset('images/ecom-dashboard/small-pro/4.jpg') }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>Motors</h6><span class="text-light">$510</span>
+                                        </div>
+                                        <div class="close-pro"><i data-feather="x"></i></div>
+                                    </div>
+                                </a></li>
+                            <li><a href="javascript:void(0);">
+                                    <div class="media">
+                                        <div class="img-wrap"><img class="img-fluid"
+                                                src="{{ asset('images/ecom-dashboard/small-pro/5.jpg') }}" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>iphone</h6><span class="text-light">$140</span>
+                                        </div>
+                                        <div class="close-pro"><i data-feather="x"></i></div>
+                                    </div>
+                                </a></li>
+                        </ul>
+                        <div class="drop-footer"><a href="checkout.html">Checkout All<i
+                                    data-feather="arrow-right"></i></a></div>
+                    </div>
+                </li>
+                <li>
+                    <div class="navicon-wrap btn-windowfull"><i data-feather="maximize"> </i></div>
+                </li>
+                <li class="nav-profile">
+                    <div class="media">
+                        <div class="user-icon"><img class="img-fluid rounded-50" src="{{ asset('images/avtar/3.jpg') }}"
+                                alt="logo">
+                        </div>
+                        <div class="media-body">
+                            <h6>Thomas Vactom</h6><span class="text-light">Web designer</span>
+                        </div>
+                    </div>
+                    <div class="hover-dropdown navprofile-drop">
+                        <ul>
+                            <li><a href="profile.html"><i data-feather="user"></i>profile</a></li>
+                            <li><a href="email-inbox.html"><i data-feather="mail"></i>inbox</a></li>
+                            <li><a href="user-edit.html"> <i data-feather="settings"></i>setting </a></li>
+                            <li> <a href="login.html"><i data-feather="log-out"></i>log out</a></li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
     </div>
-    <!-- Container ends -->
-
-</div>
-<!-- App header ends -->
+</header>
+<!-- Header End-->

@@ -1,317 +1,183 @@
-<!-- App navbar starts -->
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <div class="offcanvas offcanvas-end" id="MobileMenu">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title semibold">Navigation</h5>
-        <button type="button" class="btn btn-danger btn-sm" data-bs-dismiss="offcanvas">
-          <i class="icon-clear"></i>
-        </button>
-      </div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item dropdown active-link">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-stacked_line_chart"></i> Dashboards
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item current-page" href="index.html">
-                <span>Analytics</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="reports.html">
-                <span>Reports</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-add_task"></i>Tickets
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="all-tickets.html">
-                <span>All Tickets</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="open-tickets.html"><span>Open Tickets</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="pending-tickets.html"><span>Pending Tickets</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="closed-tickets.html"><span>Closed Tickets</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="solved-tickets.html"><span>Solved Tickets</span></a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="clients.html"><i class="icon-supervised_user_circle"></i> Clients
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="agents.html">
-            <i class="icon-support_agent"></i>Agents
-          </a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-package"></i>Pages
-          </a>
-          <ul class="dropdown-menu dropdown-megamenu">
-            <li>
-              <a class="dropdown-item" href="agent-profile.html">
-                <span>Agent Profile</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="starter-page.html">
-                <span>Starter Page</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="client-list.html">
-                <span>Client List</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="create-invoice.html">
-                <span>Create Invoice</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="invoice.html">
-                <span>Invoice Details</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="invoice-list.html">
-                <span>Invoice List</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="faq.html">
-                <span>FAQ</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="contact-us.html">
-                <span>Contact Us</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="notifications.html">
-                <span>Notifications</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="subscribers.html">
-                <span>Subscribers</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="placeholder.html">
-                <span>Placeholder</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="account-settings.html">
-                <span>Account Settings</span></a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-server"></i>UI Elements
-          </a>
-          <ul class="dropdown-menu dropdown-megamenu">
-            <li>
-              <a class="dropdown-item" href="accordions.html">
-                <span>Accordions</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="alerts.html">
-                <span>Alerts</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="buttons.html">
-                <span>Buttons</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="badges.html">
-                <span>Badges</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="cards.html">
-                <span>Cards</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="custom-cards.html">
-                <span>Custom Cards</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="carousel.html">
-                <span>Carousel</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="icons.html">
-                <span>Icons</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="list-items.html">
-                <span>List Items</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="modals.html">
-                <span>Modals</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="progress.html">
-                <span>Progress Bars</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="popovers.html">
-                <span>Popovers</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="tables.html">
-                <span>Tables</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="tabs.html">
-                <span>Tabs</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="tooltips.html">
-                <span>Tooltips</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="typography.html">
-                <span>Typography</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-drive_file_rename_outline"></i>Forms
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="form-inputs.html"><span>Basic Inputs</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="form-checkbox-radio.html"><span>Checkbox &amp; Radio</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="form-file-input.html"><span>File Input</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="form-validations.html"><span>Validations</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="form-layouts.html">Form Layouts</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-margin"></i> Plugins
-          </a>
-          <ul class="dropdown-menu">
-            <li>
-              <a class="dropdown-item" href="apex.html"><span>Apex Graphs</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="morris.html"><span>Morris Graphs</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="editor.html"><span>Editor</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="calendar.html"><span>Calendar Daygrid View</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="calendar-external-draggable.html"><span>Calendar External
-                  Draggable</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="calendar-google.html"><span>Calendar Google</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="calendar-list-view.html"><span>Calendar List View</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="calendar-selectable.html"><span>Calendar Selectable</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="date-time-pickers.html"><span>Date Time Pickers</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="datatables.html"><span>Data Tables</span></a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="maps.html"><span>Maps</span></a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            <i class="icon-login"></i>Login
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li>
-              <a class="dropdown-item" href="login.html">
-                <span>Login</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="signup.html">
-                <span>Signup</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="forgot-password.html">
-                <span>Forgot Password</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="page-not-found.html">
-                <span>Page Not Found</span>
-              </a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="maintenance.html">
-                <span>Maintenance</span>
-              </a>
-            </li>
-          </ul>
-        </li>
-      </ul>
+<!-- sidebar start-->
+<aside class="codex-sidebar">
+  <div class="logo-gridwrap">
+    <a href="index.html"><img class="img-fluid light-logo" src="{{ asset('images/logo/logo.png') }}"
+        alt="theme-logo"><img class="img-fluid dark-logo" src="{{ asset('images/logo/logo.png') }}"
+        alt="theme-logo"></a>
+    <div class="sidebar-action"> <i data-feather="grid"></i></div>
+  </div>
+  <div class="sideuser-profile">
+    <div class="profile-img"><img class="img-fluid rounded-50" src="{{ asset('images/avtar/1.jpg') }}" alt="theme-logo">
+    </div>
+    <div class="profile-detail">
+      <h6>Thomas Vactom</h6>
+      <p class="text-light">Web Designer</p>
     </div>
   </div>
-</nav>
-<!-- App Navbar ends -->
+  <nav class="codex-menuwrapper">
+    <ul class="codex-menu custom-scroll" data-simplebar>
+
+      <!-- Dashboard -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="home"></i></div><span>Dashboard</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Visão geral</a></li>
+          <li><a href="#">Resumo financeiro</a></li>
+          <li><a href="#">Agendamentos do dia/semana</a></li>
+          <li><a href="#">Indicadores de desempenho (KPIs)</a></li>
+        </ul>
+      </li>
+
+      <!-- Clientes -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"> <i data-feather="user"></i></div><span>Clientes</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Cadastro de clientes</a></li>
+          <li><a href="#">Histórico de atendimentos</a></li>
+          <li><a href="#">Preferências e perfis</a></li>
+          <li><a href="#">Recomendações personalizadas</a></li>
+          <li><a href="#">Notificações e marketing</a></li>
+        </ul>
+      </li>
+
+      <!-- Agendamentos -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"> <i data-feather="calendar"></i></div><span>Agendamentos</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Calendário</a></li>
+          <li><a href="#">Horários disponíveis</a></li>
+          <li><a href="#">Agendamentos online</a></li>
+          <li><a href="#">Histórico de agendamentos</a></li>
+          <li><a href="#">Notificações</a></li>
+        </ul>
+      </li>
+
+      <!-- Profissionais -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"> <i data-feather="users"></i></div><span>Profissionais</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Cadastro de profissionais</a></li>
+          <li><a href="#">Perfis de trabalho</a></li>
+          <li><a href="#">Controle de disponibilidade</a></li>
+          <li><a href="#">Gerenciamento de comissões</a></li>
+          <li><a href="#">Histórico de atendimentos e desempenho</a></li>
+        </ul>
+      </li>
+
+      <!-- Serviços -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"> <i data-feather="scissors"></i></div><span>Serviços</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Cadastro e gerenciamento</a></li>
+          <li><a href="#">Preços, descrição, duração</a></li>
+          <li><a href="#">Pacotes</a></li>
+          <li><a href="#">Recomendações de serviços</a></li>
+        </ul>
+      </li>
+
+      <!-- Vendas e Pagamentos -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"> <i data-feather="dollar-sign"></i></div><span>Vendas e Pagamentos</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Gerenciamento de vendas</a></li>
+          <li><a href="#">Métodos de pagamento</a></li>
+          <li><a href="#">Comissões automáticas</a></li>
+          <li><a href="#">Histórico de vendas</a></li>
+          <li><a href="#">Relatórios</a></li>
+        </ul>
+      </li>
+
+      <!-- Produtos e Estoque -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="package"></i></div><span>Produtos e Estoque</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Gerenciamento de estoque</a></li>
+          <li><a href="#">Cadastro de produtos</a></li>
+          <li><a href="#">Estoque mínimo</a></li>
+          <li><a href="#">Relatório de vendas</a></li>
+        </ul>
+      </li>
+
+      <!-- Comissões -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="credit-card"></i></div><span>Comissões</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Cálculo automático de comissões</a></li>
+          <li><a href="#">Configuração de regras</a></li>
+          <li><a href="#">Relatórios de comissões</a></li>
+          <li><a href="#">Histórico de comissões</a></li>
+        </ul>
+      </li>
+
+      <!-- Relatórios -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="bar-chart"></i></div><span>Relatórios</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Relatórios de tendências</a></li>
+          <li><a href="#">Relatório de atendimentos</a></li>
+          <li><a href="#">Relatório de serviços e produtos</a></li>
+          <li><a href="#">Relatórios de desempenho</a></li>
+          <li><a href="#">Relatórios financeiros</a></li>
+        </ul>
+      </li>
+
+      <!-- Gestão de Aluguel -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="briefcase"></i></div><span>Gestão de Aluguel</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Gerenciamento de aluguéis</a></li>
+          <li><a href="#">Controle de pagamento</a></li>
+          <li><a href="#">Comissões</a></li>
+          <li><a href="#">Histórico de uso e faturamento</a></li>
+        </ul>
+      </li>
+
+      <!-- Marketing -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="mail"></i></div><span>Marketing</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Recomendações automáticas</a></li>
+          <li><a href="#">Análise de engajamento</a></li>
+          <li><a href="#">Programas de fidelidade</a></li>
+          <li><a href="#">Campanhas de marketing</a></li>
+        </ul>
+      </li>
+
+      <!-- Usuários e Perfis de Acesso -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="key"></i></div><span>Usuários e Perfis</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Gerenciamento de usuários</a></li>
+          <li><a href="#">Perfis de acesso</a></li>
+          <li><a href="#">Definição de permissões</a></li>
+          <li><a href="#">Auditoria de atividades</a></li>
+        </ul>
+      </li>
+
+      <!-- Configurações -->
+      <li class="menu-item"><a href="javascript:void(0);">
+          <div class="icon-item"><i data-feather="settings"></i></div><span>Configurações</span>
+        </a>
+        <ul class="submenu-list">
+          <li><a href="#">Notificações</a></li>
+          <li><a href="#">Integração com WhatsApp</a></li>
+          <li><a href="#">Personalização do layout</a></li>
+          <li><a href="#">Configurações gerais</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<!-- sidebar end-->
